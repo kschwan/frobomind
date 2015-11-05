@@ -59,6 +59,14 @@ public:
 		imu_msg.orientation_covariance[0] = cov_x;
 		imu_msg.orientation_covariance[4] = cov_y;
 		imu_msg.orientation_covariance[8] = cov_z;
+
+		imu_msg.angular_velocity_covariance[0] = cov_x;
+		imu_msg.angular_velocity_covariance[4] = cov_y;
+		imu_msg.angular_velocity_covariance[8] = cov_z;
+
+		imu_msg.linear_acceleration_covariance[0] = cov_x;
+		imu_msg.linear_acceleration_covariance[4] = cov_y;
+		imu_msg.linear_acceleration_covariance[8] = cov_z;
 	}
 
 	void processSerialCallback(const msgs::serial::ConstPtr& rx_msg)
